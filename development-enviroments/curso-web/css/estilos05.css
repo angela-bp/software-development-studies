@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after { box-sizing: border-box; }
+.fondo { 
+    min-height: 220px; 
+    padding: 2rem; 
+    margin-bottom: 
+    1rem; color: white; 
+} 
+.plano{ 
+    background: #04a17a;
+}
+.degradado { 
+    background: linear-gradient(120deg, #1dd8d8, #ea33a7); 
+}
+.imagen { background: linear-gradient( rgba(195, 85, 241, 0.4), rgba(57, 83, 154, 0.4)), 
+    url('https://caminolopez.com/wp-content/uploads/2019/05/Estampado-Camino-Lo%CC%81pez-flores-silvestres-2.jpg') 
+    center/ cover no-repeat; 
+}

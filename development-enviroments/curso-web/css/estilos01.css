@@ -1,0 +1,16 @@
+/* css/estilos01.css */
+*,
+*::before,
+*::after { box-sizing: border-box;}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #1b193e;
+    background: #f6f7fa;
+    line-height: 1.6;
+}
+.contenedor {
+    width: min(90%, 1100px);
+    margin-inline: auto;
+}
