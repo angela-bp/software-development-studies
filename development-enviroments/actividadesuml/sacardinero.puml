@@ -1,0 +1,33 @@
+start
+
+:Cliente solicita retirar dinero;
+:Ingresar monto a retirar;
+
+if (¿Cuenta activa?) then (sí)
+
+  :Verificar saldo disponible;
+
+  if (¿Saldo suficiente?) then (sí)
+
+    :Descontar monto de la cuenta;
+    :Entregar dinero en efectivo;
+    :Generar comprobante de retiro;
+
+    
+  else (no)
+
+    :Mostrar error "Saldo insuficiente";
+
+  endif
+
+else (no)
+
+    :Mostrar error "Cuenta bloqueada o inactiva";
+    
+
+endif
+
+stop
+
+
+@endnuml

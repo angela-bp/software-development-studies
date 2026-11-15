@@ -1,0 +1,35 @@
+@startuml
+
+autonumber
+
+actor "Cliente/Usuario" as User
+
+participant "Servidor Web" as Web
+
+database "Base de Datos" as DB
+
+
+
+User -> Web: Introducir credenciales (login)
+
+activate Web
+
+
+
+Web -> DB: Validar usuario y contraseña
+
+activate DB
+
+DB --> Web: Credenciales válidas
+
+deactivate DB
+
+
+
+Web -> Web: Generar token JWT
+
+User <-- Web: Respuesta exitosa + Token JWT
+
+deactivate Web
+
+@enduml

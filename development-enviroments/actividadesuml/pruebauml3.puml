@@ -1,0 +1,37 @@
+@startuml
+
+start
+
+:Usuario solicita iniciar sesión;
+
+if (¿Introdujo correo y contraseña?) then (sí)
+
+  :Verificar datos en la base de datos;
+
+  if (¿Datos correctos?) then (sí)
+
+    :Generar sesión de usuario;
+
+    :Redirigir al Panel Principal;
+
+    stop
+
+  else (no)
+
+    :Mostrar error "Credenciales incorrectas";
+
+  endif
+
+else (no)
+
+  :Mostrar error "Campos obligatorios vacíos";
+
+endif
+
+:Permitir reintento;
+
+stop
+
+@enduml
+
+Presione Mayús + Tabulación para navegar por el historial de chat.

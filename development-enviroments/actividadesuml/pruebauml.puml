@@ -1,0 +1,45 @@
+@startuml
+
+class Persona {
+
+  - String nombre
+
+  - String apellido
+
+  + obtenerNombreCompleto(): String
+
+}
+
+
+
+class Cliente {
+
+  - String idCliente
+
+  - double saldo
+
+  + realizarPago(monto: double)
+
+}
+
+
+
+class CuentaBancaria {
+
+  + String numeroCuenta
+
+  - double balance
+
+  + depositar(monto: double)
+
+  + retirar(monto: double): boolean
+
+}
+
+
+
+Persona <|-- Cliente
+
+Cliente "1" *-- "1..*" CuentaBancaria
+
+@enduml

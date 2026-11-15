@@ -1,0 +1,16 @@
+start
+
+:Inicio;
+:Interacción con el cliente;
+if (Condición) then (YES)
+    :Proceso;
+    :Fin:
+stop
+
+else (NO)
+    :Proceso;
+detach
+endif
+
+@enduml
+

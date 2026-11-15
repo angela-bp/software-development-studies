@@ -1,0 +1,38 @@
+class Customer{
+   +Id: int
+   +Name: String
+   +Adress: String
+   +PhoneNo: int
+   +AcctNo: int
+   ----
+   +GeneralInquiry()
+   +DepositMoney()
+   +WithdrawMoney()
+   +OpenAccount()
+   +CloseAccount()
+   +ApplyForLoan()
+   +RequestCard()
+}
+
+class Bank {
+  +BankId: int
+  +Name: string
+  +Location: string
+}
+
+class Teller {
+  +Id: int
+  +Name: string
+  --
+  +CollectMoney()
+  +OpenAccount()
+  +CloseAccount()
+  +LoanRequest()
+  +ProvideInfo()
+  +IssueCard()
+}
+
+Bank "+1" -- "1..*" Customer
+Bank "+1" -- "1..*" Teller
+Customer "+1.." -- "1..*" Teller
+@enduml
